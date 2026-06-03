@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
+}
+
+/* ---------------- MAIN CARD ---------------- */
+.container {
+    width: 380px;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    color: white;
+    text-align: center;
+}
+
+/* ---------------- SEARCH ---------------- */
+.head {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.head input {
+    flex: 1;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 0 15px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.head input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+#search {
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    background: #38bdf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#search:hover {
+    transform: scale(1.1);
+}
+
+/* ---------------- WEATHER ICON ---------------- */
+.cloud {
+    margin-top: 10px;
+}
+
+#weatherIcon {
+    font-size: 7rem;   /* 🔥 BIG ICON */
+    margin: 10px 0;
+    transition: 0.4s;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+}
+
+/* ---------------- TEXT ---------------- */
+.centre {
+    margin-top: 10px;
+}
+
+#degree {
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+#city {
+    font-size: 1.8rem;
+    opacity: 0.85;
+}
+
+/* ---------------- DETAILS BOX ---------------- */
+.icon {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#water, #wind {
+    width: 48%;
+    background: rgba(255,255,255,0.12);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#water i, #wind i {
+    font-size: 1.8rem;
+    color: #38bdf8;
+}
+
+#para1, #para2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ---------------- LABELS ---------------- */
+.names {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 13px;
+    opacity: 0.8;
+}
