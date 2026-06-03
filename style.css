@@ -6,20 +6,23 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
+    padding: 20px; /* Mobile par screen se bilkul chipke na */
 }
 
 /* ---------------- MAIN CARD ---------------- */
 .container {
-    width: 380px;
+    width: 100%;
+    max-width: 380px; /* Desktop par bada rahega, mobile par chota */
     padding: 25px;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255,255,255,0.2);
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     color: white;
@@ -71,10 +74,11 @@ body {
 }
 
 #weatherIcon {
-    font-size: 7rem;   /* 🔥 BIG ICON */
+    font-size: 7rem;
     margin: 10px 0;
     transition: 0.4s;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+    color: #f59e0b; /* Sun ka pyara yellow color */
 }
 
 /* ---------------- TEXT ---------------- */
@@ -83,48 +87,80 @@ body {
 }
 
 #degree {
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     font-weight: bold;
 }
 
 #city {
     font-size: 1.8rem;
     opacity: 0.85;
+    margin-top: 5px;
 }
 
 /* ---------------- DETAILS BOX ---------------- */
 .icon {
     display: flex;
     justify-content: space-between;
+    gap: 12px;
     margin-top: 30px;
 }
 
 #water, #wind {
-    width: 48%;
-    background: rgba(255,255,255,0.12);
-    padding: 15px;
-    border-radius: 15px;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px 10px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #water i, #wind i {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #38bdf8;
 }
 
-#para1, #para2 {
-    font-size: 1.2rem;
-    font-weight: 600;
+.info-text {
+    text-align: left;
 }
 
-/* ---------------- LABELS ---------------- */
-.names {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 8px;
-    font-size: 13px;
-    opacity: 0.8;
+#para1, #para2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.info-text span {
+    font-size: 11px;
+    opacity: 0.6;
+    display: block;
+}
+
+/* ---------------- MEDIA QUERIES (FOR MOBILE) ---------------- */
+@media (max-width: 360px) {
+    .container {
+        padding: 20px;
+    }
+    
+    #weatherIcon {
+        font-size: 5.5rem;
+    }
+    
+    #degree {
+        font-size: 2.8rem;
+    }
+    
+    #city {
+        font-size: 1.5rem;
+    }
+
+    #water, #wind {
+        padding: 10px 5px;
+    }
+
+    #para1, #para2 {
+        font-size: 0.95rem;
+    }
 }
