@@ -11,13 +11,12 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
-    padding: 20px; /* Mobile par screen se bilkul chipke na */
+    padding: 20px;
 }
 
-/* ---------------- MAIN CARD ---------------- */
 .container {
     width: 100%;
-    max-width: 380px; /* Desktop par bada rahega, mobile par chota */
+    max-width: 380px;
     padding: 25px;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.12);
@@ -29,15 +28,16 @@ body {
     text-align: center;
 }
 
-/* ---------------- SEARCH ---------------- */
 .head {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .head input {
     flex: 1;
+    min-width: 0;
     height: 45px;
     border: none;
     outline: none;
@@ -53,6 +53,7 @@ body {
 }
 
 #search {
+    flex-shrink: 0;
     width: 45px;
     height: 45px;
     border-radius: 15px;
@@ -65,10 +66,9 @@ body {
 }
 
 #search:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* ---------------- WEATHER ICON ---------------- */
 .cloud {
     margin-top: 10px;
 }
@@ -78,10 +78,9 @@ body {
     margin: 10px 0;
     transition: 0.4s;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
-    color: #f59e0b; /* Sun ka pyara yellow color */
+    color: #f59e0b;
 }
 
-/* ---------------- TEXT ---------------- */
 .centre {
     margin-top: 10px;
 }
@@ -95,9 +94,9 @@ body {
     font-size: 1.8rem;
     opacity: 0.85;
     margin-top: 5px;
+    text-transform: capitalize;
 }
 
-/* ---------------- DETAILS BOX ---------------- */
 .icon {
     display: flex;
     justify-content: space-between;
@@ -138,29 +137,25 @@ body {
     display: block;
 }
 
-/* ---------------- MEDIA QUERIES (FOR MOBILE) ---------------- */
 @media (max-width: 360px) {
     .container {
         padding: 20px;
     }
     
     #weatherIcon {
-        font-size: 5.5rem;
+        font-size: 5rem;
     }
     
     #degree {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
     
-    #city {
-        font-size: 1.5rem;
+    .head input {
+        font-size: 14px;
+        padding: 0 10px;
     }
-
-    #water, #wind {
-        padding: 10px 5px;
-    }
-
-    #para1, #para2 {
-        font-size: 0.95rem;
+    
+    .head {
+        gap: 5px;
     }
 }
